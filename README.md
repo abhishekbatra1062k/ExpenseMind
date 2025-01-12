@@ -38,7 +38,6 @@ ExpenseMind is a backend service for managing personal financial tracking. Built
    ```bash
    python -m venv env
    source env/bin/activate
-   env\Scripts\activate
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
