@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "5b3e3d2d-734c-4a19-a382-593c07fe2dd3",
+		"name": "Expense Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38906832"
+	},
+	"item": [
+		{
+			"name": "get_expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/expenses",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Watch\",\n    \"amount\": 120\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/expenses/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"expenses",
+						""
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_expense",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/expenses?expense_id=b264cd99-ea78-42e4-825c-320156de640d&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "expense_id",
+							"value": "b264cd99-ea78-42e4-825c-320156de640d"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_expense",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Phone\",\n    \"amount\": 800\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/expenses?expense_id=520456b1-5d9f-4bb5-b851-614b492927f0&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "expense_id",
+							"value": "520456b1-5d9f-4bb5-b851-614b492927f0"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWJoaXNoZWsiLCJwYXNzd29yZCI6ImZkM2NhMzcwNzFlZDkxMzk0MWI1OTJhNDNkZjY1MmVmIn0.Na9QfUzGS9G9OuWXRaPFyUGAG2R8TT5MLXUHWd9f6JA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"abhishek\",\n    \"password\": \"abhishek\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"abhishek\",\n    \"password\": \"abhishek\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
